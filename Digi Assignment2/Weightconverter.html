@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weight Converter</title>
+        <!-- Style sheet -->
+        <style>
+        body {background-color: #ffffcc;}
+        h2 {text-align: center;}
+        h3 {text-align: center;}
+        lable {text-align: center;}
+        
+        
+            span {
+                color: Blue;
+            }
+            
+            .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  table-layout: auto;
+  width: 300px;  
+}
+            
+table, th, td {
+  border: 1.5px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: left;    
+}
+</style>
+</head>
+</head>
+<body>
+        
+    <body>
+        <!-- Title of Converter -->
+        <h2 >Weight Converter</h2>
+        <h3>Enter a value in the Kilograms field in order to convert :</h3>
+  
+        <p>
+            <!-- Kilogram field -->
+  
+           <h3>Kilograms: <h3>
+        
+            <!-- to enter data, it is a must enter the tag name -->
+            <!-- kiloweightConvert function call
+ function kiloweightConvert to evaluate value-->
+ 
+            <input id="Kilograms" 
+                   type="number" 
+                   placeholder="kilograms" 
+                   oninput="kiloweightConvert(this.value)" 
+                   onchange="kiloweightConvert(this.value)" />
+                   
+                   
+        </p>
+        
+        
+        <!-- output field-->
+ 
+         <p>
+         <table class="center">
+        <tr>
+        <td>
+        Pounds: <span id="Pounds"></span>
+        </td>
+        </tr>
+        </p>
+        
+        <tr>
+        <td>
+        <p>Milligrams: <span id="Milligrams"></span>
+ 		</td>
+        </tr>
+  </table>
+  
+        <script>
+     //The function that evaluates the weight and return the output
+            function kiloweightConvert(value) {
+                document.getElementById("Pounds").innerHTML =
+                  value * 2.2046;
+                document.getElementById("Milligrams").innerHTML =
+                  value * 1000000;
+            }
+        </script>
+    </body>
+</html>
